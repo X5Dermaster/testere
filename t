@@ -1,7 +1,7 @@
 
 
 
-if not getgenv().__panda_elc_d84115c95b5c4c26 then
+--[[if not getgenv().__panda_elc_d84115c95b5c4c26 then
 getgenv().__panda_elc_d84115c95b5c4c26 = true
 local jsonEncode = game:GetService("HttpService").JSONEncode
 task.spawn(function()
@@ -25,7 +25,7 @@ task.spawn(function()
         end
     end
 end)
-end
+end]]
 
 
 
