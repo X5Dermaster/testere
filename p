@@ -102,15 +102,19 @@ local Tabs = {
 }
 
 Tabs.Rusuh_tab:Button({
-    Title = "Export WindUI JSON (copy)",
-    Color = Color3.fromHex("#a2ff30"),
+    Title = "Button 1",
     Justify = "Center",
-    IconAlign = "Left",
     Icon = "",
     Callback = function()
-        WindUI:Notify({
-            Title = "WindUI JSON",
-            Content = "Copied to Clipboard!",
-        })
+        print("clicked button 1")
+    end,
+})
+Tabs.Rusuh_tab:Space()
+Tabs.Rusuh_tab:Button({
+    Title = "Button 2",
+    Justify = "Center",
+    Icon = "",
+    Callback = function()
+        print("clicked button 2")
     end,
 })
