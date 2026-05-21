@@ -1,9 +1,4 @@
 local RunService = game:GetService("RunService")
---[[
-
-    WindUI Example (wip)
-    
-]]
 
 local cloneref = (cloneref or clonereference or function(instance)
 	return instance
@@ -30,20 +25,6 @@ do
 	end
 end
 
---[[
-
-WindUI.Creator.AddIcons("solar", {
-    ["CheckSquareBold"] = "rbxassetid://132438947521974",
-    ["CursorSquareBold"] = "rbxassetid://120306472146156",
-    ["FileTextBold"] = "rbxassetid://89294979831077",
-    ["FolderWithFilesBold"] = "rbxassetid://74631950400584",
-    ["HamburgerMenuBold"] = "rbxassetid://134384554225463",
-    ["Home2Bold"] = "rbxassetid://92190299966310",
-    ["InfoSquareBold"] = "rbxassetid://119096461016615",
-    ["PasswordMinimalisticInputBold"] = "rbxassetid://109919668957167",
-    ["SolarSquareTransferHorizontalBold"] = "rbxassetid://125444491429160",
-})--]]
-
 function createPopup()
 	return WindUI:Popup({
 		Title = "Welcome to the WindUI!",
@@ -69,44 +50,35 @@ function createPopup()
 	})
 end
 
--- */  Window  /* --
 local Window = WindUI:CreateWindow({
-	Title = ".ftgs hub  |  WindUI Example",
-	--Author = "by .ftgs • Footagesus",
+	Title = "SannSunner Hub",
+	Author = "by SannSunner x5_demaster",
 	Folder = "ftgshub",
 	Icon = "solar:folder-2-bold-duotone",
-	--Theme = "Mellowsi",
-	--IconSize = 22*2,
 	NewElements = true,
-	--Size = UDim2.fromOffset(700,700),
 
-	HideSearchBar = false,
+	HideSearchBar = true,
 
 	OpenButton = {
-		Title = "Open .ftgs hub UI", -- can be changed
-		CornerRadius = UDim.new(1, 0), -- fully rounded
-		StrokeThickness = 3, -- removing outline
-		Enabled = true, -- enable or disable openbutton
+		Title = "Open SannSunner UI",
+		CornerRadius = UDim.new(1, 0),
+		StrokeThickness = 3,
+		Enabled = true,
 		Draggable = true,
 		OnlyMobile = false,
 		Scale = 0.5,
 
-		Color = ColorSequence.new( -- gradient
+		Color = ColorSequence.new(
 			Color3.fromHex("#30FF6A"),
 			Color3.fromHex("#e7ff2f")
 		),
 	},
 	Topbar = {
 		Height = 44,
-		ButtonsType = "Mac", -- Default or Mac
+		ButtonsType = "Mac",
 	},
 })
 
---createPopup()
-
---Window:SetUIScale(.8)
-
--- */  Tags  /* --
 do
 	Window:Tag({
 		Title = "v" .. WindUI.Version,
@@ -116,7 +88,6 @@ do
 	})
 end
 
--- */  Colors  /* --
 local Purple = Color3.fromHex("#7775F2")
 local Yellow = Color3.fromHex("#ECA201")
 local Green = Color3.fromHex("#10C550")
@@ -124,3 +95,22 @@ local Grey = Color3.fromHex("#83889E")
 local Blue = Color3.fromHex("#257AF7")
 local Red = Color3.fromHex("#EF4F1D")
 
+local Tabs = {
+	Rusuh_tab = Window:Tab({
+		Title = "Rusuh",
+	}),
+}
+
+Tabs.Rusuh_tab:Button({
+    Title = "Export WindUI JSON (copy)",
+    Color = Color3.fromHex("#a2ff30"),
+    Justify = "Center",
+    IconAlign = "Left",
+    Icon = "",
+    Callback = function()
+        WindUI:Notify({
+            Title = "WindUI JSON",
+            Content = "Copied to Clipboard!",
+        })
+    end,
+})
